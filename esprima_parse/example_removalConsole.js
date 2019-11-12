@@ -12,8 +12,8 @@ function removeCalls(source) {
   const entries = [];
   esprima.parseScript(source, {}, function (node, meta) {
     if (isConsoleCall(node)) {
-      // console.log('isConsoleCall node is ', node)
-      // console.log('meta is ', meta)
+      console.log('isConsoleCall node is ', node)
+      console.log('meta is ', meta)
       entries.push({
           start: meta.start.offset,
           end: meta.end.offset
@@ -21,8 +21,7 @@ function removeCalls(source) {
     }
   });
   entries.sort((a, b) => { return b.end - a.end }).forEach(n => {
-    console.log('source is ', source)
-    source = source.slice(0, n.start) + source.slice(n.end);
+      source = source.slice(0, n.start) + source.slice(n.end);
   });
   return source;
 }

@@ -8,6 +8,7 @@ esprima.parse(esprimaParse, {} ,(node, metadata) => {
   console.log('esprimaParse callback node is '.blue, node)
   console.log('esprimaParse callback metadata is '.blue, metadata)
 })
+
 /**
  * delegate会将代码片段轮询，并遍历出所有的节点信息
  * 例如：let answer = 'test unknow
