@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "ast": "nodemon ./vueToMini/index.js"
+  },
   "dependencies": {
     "colors": "^1.4.0",
     "recast": "^0.18.3",
