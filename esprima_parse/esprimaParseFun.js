@@ -1,8 +1,8 @@
 const esprima = require('esprima')
-const { esprimaParseFun } = require('./demo')
+const { esprimaParseFunExpression } = require('./demo')
 require('colors')
 
-console.log('esprimaParseFun is '.magenta, esprima.parse(esprimaParseFun))
+console.log('esprimaParseFunExpression is '.magenta, esprima.parse(esprimaParseFunExpression))
 /**
  * Script {
   type: 'Program',
@@ -18,7 +18,7 @@ console.log('esprimaParseFun is '.magenta, esprima.parse(esprimaParseFun))
   sourceType: 'script' }
 */
 
-console.log('esprimaParseFun body is '.magenta, esprima.parse(esprimaParseFun).body[0].body.body)
+console.log('esprimaParseFunExpression body is '.magenta, esprima.parse(esprimaParseFunExpression).body[0].declarations[0].init.body.body)
 /**
  * [ ReturnStatement {
     type: 'ReturnStatement',
