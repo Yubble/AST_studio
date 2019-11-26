@@ -10,8 +10,7 @@ const code =
 
 const ast = recast.parse(code);
 
-const add = ast.program.body[0]
-// console.log(JSON.stringify(add))
+let add = ast.program.body[0]
 
 add = variableDeclaration("const", [
   variableDeclarator(add.id, functionExpression(
