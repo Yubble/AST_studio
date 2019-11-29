@@ -9,7 +9,5 @@ module.exports = source => {
   // console.log('builder is ', builder)
   
   const vueScript = ast.program.body[0]
-  // console.log('vue program is ', vueScript)
-
-  console.log('ast is ', ast)
+  console.log('vue program is ', vueScript)
 }

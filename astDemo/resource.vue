@@ -9,6 +9,7 @@
 </template>
 
 <script>
+Page()
 export default {
   data() {
     return {
@@ -17,7 +18,8 @@ export default {
   },
   methods: {
     showName() {
-      window.alert('my name is LiuYanbao')
+      const name = 'my name is LiuYanbao'
+      window.alert(name)
     }
   },
   mounted() {
