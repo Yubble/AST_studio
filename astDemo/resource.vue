@@ -9,7 +9,6 @@
 </template>
 
 <script>
-Page()
 export default {
   data() {
     return {
