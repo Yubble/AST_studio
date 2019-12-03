@@ -12,31 +12,38 @@ module.exports = source => {
   // 过滤出所有属性
   // 写好data对象变量赋值
   let dataContent = null
+  let methodsPros = null
   propertiesAst.forEach(ele => {
     if (ele.key.name === 'data') {
       dataContent = ele.value.body.body[0].argument
     }
+    if (ele.key.name === 'methods') {
+      methodsPros = ele.value.properties
+    }
   })
 
   // 小程序的data对象
-  const dataObj = objectExpression([{
-    type: 'Property',
-    kind: 'init',
-    key: {
-      type: 'Identifier',
-      name: 'data'
+  const dataObj = objectExpression([
+    {
+      type: 'Property',
+      kind: 'init',
+      key: {
+        type: 'Identifier',
+        name: 'data'
+      },
+      value: dataContent
     },
-    value: dataContent
-  }])
+    ...methodsPros
+  ])
 
-  const newFun = expressionStatement(callExpression({
+  const miniScript = expressionStatement(callExpression({
     type: "Identifier",
     name: "page"
   }, [dataObj]))
 
-  console.log('newFun is ', newFun)
+  // console.log('miniScript is ', miniScript)
 
   // 将处理好的ast打印编译
-  const output = recast.print(newFun).code
+  const output = recast.print(miniScript).code
   console.log('output is ', output)
 }

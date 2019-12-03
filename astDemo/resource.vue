@@ -20,6 +20,9 @@ export default {
     showName() {
       const name = 'my name is LiuYanbao'
       window.alert(name)
+    },
+    noneName() {
+      console.log('这个方法没什么用')
     }
   },
   mounted() {
