@@ -22,8 +22,16 @@ module.exports = vueName => {
   const scriptEndIndex = vueSource.indexOf(signObj.scriptEnd)
   const script = vueSource.slice(scriptStartIndex + scriptStartLen, scriptEndIndex)
 
+  // 定位style开始下标
+  const styleStartIndex = vueSource.indexOf(signObj.styleStart)
+  const styleStartLen = signObj.styleStart.length
+
+  // 定位style结束下标
+  const styleEndIndex = vueSource.indexOf(signObj.styleEnd)
+  const style = vueSource.slice(styleStartIndex + styleStartLen, styleEndIndex)
   return {
     template,
-    script
+    script,
+    style
   }
 }

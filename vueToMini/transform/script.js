@@ -13,12 +13,17 @@ module.exports = source => {
   // 写好data对象变量赋值
   let dataContent = null
   let methodsPros = null
+  let onReadyCont = null
   propertiesAst.forEach(ele => {
     if (ele.key.name === 'data') {
       dataContent = ele.value.body.body[0].argument
     }
     if (ele.key.name === 'methods') {
       methodsPros = ele.value.properties
+    }
+    if (ele.key.name === 'mounted') {
+      ele.key.name = 'onReady'
+      onReadyCont = ele
     }
   })
 
@@ -33,7 +38,8 @@ module.exports = source => {
       },
       value: dataContent
     },
-    ...methodsPros
+    ...methodsPros,
+    onReadyCont
   ])
 
   const miniScript = expressionStatement(callExpression({
@@ -41,9 +47,7 @@ module.exports = source => {
     name: "page"
   }, [dataObj]))
 
-  // console.log('miniScript is ', miniScript)
-
   // 将处理好的ast打印编译
   const output = recast.print(miniScript).code
-  console.log('output is ', output)
+  return output
 }
