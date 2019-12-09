@@ -4,6 +4,7 @@
   },
   "dependencies": {
     "colors": "^1.4.0",
+    "css-tree": "^1.0.0-alpha.38",
     "esprima": "^4.0.1",
     "recast": "^0.18.3",
     "vue": "^2.6.10"
