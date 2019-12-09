@@ -44,7 +44,7 @@ module.exports = source => {
 
   const miniScript = expressionStatement(callExpression({
     type: "Identifier",
-    name: "page"
+    name: "Page"
   }, [dataObj]))
 
   // 将处理好的ast打印编译

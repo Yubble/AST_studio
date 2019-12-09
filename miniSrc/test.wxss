@@ -1,0 +1,1 @@
+html,body,h2,div,h1,span,p,ul{margin:0;padding:0;border:0rpx}.wrap{height:300rpx;width:430rpx;position:relative;border:1rpx solid #cacaca}.title{background:#76eff7;font-size:26rpx;padding:0 5rpx}.content{box-sizing:border-box;padding:30rpx}.remark{position:absolute;right:23rpx;bottom:20rpx}

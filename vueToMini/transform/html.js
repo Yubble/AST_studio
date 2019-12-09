@@ -8,6 +8,8 @@ module.exports = source => {
     .replace(tagsReg.toTextEndTag, '</text>')
     .replace(tagsReg.toBlockStartTag, '<block ')
     .replace(tagsReg.toBlockEndTag, '</block>')
+    .replace(tagsReg.toTxtCloseTag, '<text>')
+    .replace(tagsReg.clickEvent, 'bindtap')
 
   return wxml
 }
