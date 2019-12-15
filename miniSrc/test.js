@@ -1,4 +1,4 @@
-page({
+Page({
     data: {
       auth: 'Yubble',
       years: 32

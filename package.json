@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "ast": "nodemon ./vueToMini/index.js"
+    "build": "webpack",
+    "ast": "node ./vueToMini/index.js"
   },
   "dependencies": {
     "colors": "^1.4.0",
