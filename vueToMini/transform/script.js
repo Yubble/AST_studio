@@ -31,6 +31,8 @@ module.exports = source => {
     }
   })
 
+  // 查找methods和mounted中的window.alert，转化为console.log
+
   // 小程序的data对象
   const dataObj = objectExpression([
     {
