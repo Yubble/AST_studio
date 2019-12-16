@@ -1386,6 +1386,11 @@ html-webpack-plugin@^3.2.0:
     toposort "^1.0.0"
     util.promisify "1.0.0"
 
+htmldom@^4.0.11:
+  version "4.0.11"
+  resolved "https://registry.npmjs.org/htmldom/-/htmldom-4.0.11.tgz#85c7268add7d9c985c94e0d71ca3c3f7422bc0e8"
+  integrity sha512-W8Dayv3yLxxduG5IFZGvYosw4Okm1/0ZpobbJBejaBMAuSuI6chHmEw2aFopF7m2IxPhMO7UX1lDxclyFUi3Pw==
+
 htmlparser2@^3.3.0:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/htmlparser2/-/htmlparser2-3.10.1.tgz#bd679dc3f59897b6a34bb10749c855bb53a9392f"

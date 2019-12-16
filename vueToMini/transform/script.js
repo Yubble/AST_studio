@@ -1,5 +1,9 @@
 const recast = require('recast')
-const { expressionStatement, objectExpression, callExpression } = recast.types.builders
+const {
+  expressionStatement,
+  objectExpression,
+  callExpression,
+} = recast.types.builders
 
 module.exports = source => {
   // 首先将传进来的js源码转为ast模式

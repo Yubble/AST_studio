@@ -1,8 +1,1 @@
-
-<block class="wrap">
-  <view class="title">this is AstDemo</view>
-  <block class="content">
-      Ast means <text>abstract syntax tree</text>,It is a concept, not a technology.
-  </block>
-  <text class="remark" bindtap="showName">author is {{auth}}</text>
-</block>
+undefined
