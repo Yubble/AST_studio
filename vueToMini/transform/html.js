@@ -3,14 +3,6 @@ const { tagsReg } = require('../tempConfig')
 
 module.exports = source => {
 
-  // const $ = createHtmlDom(source)
-
-  // $('div.wrap').replaceWith('<block>')
-
-  // const resHtml = $.html()
-
-  // console.log('html is ', resHtml)
-
   const wxml = source
     .replace(tagsReg.toViewStartTag, '<view ')
     .replace(tagsReg.toViewEndTag, '</view>')
